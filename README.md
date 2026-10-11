@@ -110,9 +110,11 @@ decades of Python experience into reusable references for both people and agents
 [![GitHub Stars](https://img.shields.io/github/stars/python/cpython?style=flat-square&logo=github&label=Stars)](https://github.com/python/cpython)
 
 I joined the CPython core team in late 2007 and have contributed close to 700 pull
-requests over the years (among the most active contributors by commit count). My
-work has focused on security and cryptography, the standard library, and project
-governance, and I contributed to CPython's **WebAssembly** port (the WASI and
+requests over the years (among the most active contributors by commit count). For
+much of that time I maintained the **`ssl` and `hashlib`** modules — including
+porting them across the **OpenSSL 1.1 and 3.0** API transitions — and served on the
+**Python Security Response Team (PSRT)**. My work also spans the wider standard
+library, project governance, and CPython's **WebAssembly** port (the WASI and
 Emscripten build targets).
 
 PEPs I authored as sole creator:
