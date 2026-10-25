@@ -117,6 +117,14 @@ porting them across the **OpenSSL 1.1 and 3.0** API transitions — and served o
 library, project governance, and CPython's **WebAssembly** port (the WASI and
 Emscripten build targets).
 
+Most recently, in response to the compromise of eMudhra/eMSign intermediate CA keys
+([CVE-2026-115557](https://www.cve.org/CVERecord?id=CVE-2026-115557), rated 9.4
+CRITICAL), I suggested and implemented the mitigation in the `ssl` module
+([python/cpython#160040](https://github.com/python/cpython/issues/160040)) — a
+denylist that blocks TLS certificate chains containing the compromised keys, matched
+by SHA-256 digest of the `SubjectPublicKeyInfo` so cross-signed certificates can't
+slip past.
+
 PEPs I authored as sole creator:
 
 - **[PEP 370](https://peps.python.org/pep-0370/)** — Per-user `site-packages`
